@@ -1,5 +1,7 @@
 import Link from 'next/link';
+import fetch from 'isomorphic-unfetch';
 import images from '../../../images/images.json';
+import { key } from '../../../config/auth';
 import styles from './Form.module.css';
 import { useState } from 'react';
 
@@ -9,10 +11,41 @@ function Form() {
 	const [email, setEmail] = useState('');
 	const [telefone, setTelefone] = useState('');
 	const [isChecked, setChecked] = useState(false);
+	const [isLoading, setLoading] = useState(false);
 
 	const onSubmit = e => {
 		e.preventDefault();
-		alert('TESTE BOM DIA');
+
+		setLoading(true);
+
+		fetch('/api/email/send-cv', {
+			method: 'POST',
+			headers: {
+				Accept: 'application/json, text/plain, */*',
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({
+				auth: key,
+				data: {
+					preNome,
+					nome,
+					email,
+					telefone
+				}
+			})
+		})
+			.then(res => {
+				if (res.status === 200) {
+					document.body.scrollIntoView({ behavior: 'smooth' });
+					alert('Message envoyé');
+					window.location.reload();
+				} else alert("Une erreur s'est produite. Veuillez réessayer");
+			})
+			.catch(err => {
+				alert("Une erreur s'est produite. Veuillez réessayer");
+				console.log(err);
+			})
+			.finally(() => setLoading(false));
 	};
 
 	const changer = setValue => e => setValue(e.target.value);
@@ -29,7 +62,7 @@ function Form() {
 				<form className={styles.form} {...{ onSubmit }}>
 					<input
 						type='text'
-						name='preNome'
+						name='preNom'
 						placeholder='*PRÉNOM'
 						value={preNome}
 						onChange={changer(setPreNome)}
@@ -57,6 +90,7 @@ function Form() {
 					/>
 					<div className={styles['check-around']}>
 						<i
+							aria-hidden
 							className={`far fa-${isChecked ? 'check-square' : 'square'}`}
 							onClick={() => setChecked(!isChecked)}
 						/>
@@ -71,7 +105,7 @@ function Form() {
 					</div>
 					<button
 						className={`${styles.button} ${!isChecked ? styles.disabled : ''}`}
-						disabled={!isChecked}
+						disabled={!isChecked || isLoading}
 					>
 						Envoyer votre Candidature
 					</button>

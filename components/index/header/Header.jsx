@@ -13,17 +13,17 @@ function Header() {
 			<div className={styles['links-around']}>
 				<Link href='/'>
 					<span>
-						<i className='fas fa-home' /> Accueil
+						<i aria-hidden className='fas fa-home' /> Accueil
 					</span>
 				</Link>
 				<Link href='/envoyer-votre-cv'>
 					<span>
-						<i className='fas fa-file-alt' /> Envoyer votre CV
+						<i aria-hidden className='fas fa-file-alt' /> Envoyer votre CV
 					</span>
 				</Link>
 				<Link href='/contacts'>
 					<span>
-						<i className='fas fa-phone-alt' /> Contacts
+						<i aria-hidden className='fas fa-phone-alt' /> Contacts
 					</span>
 				</Link>
 			</div>
