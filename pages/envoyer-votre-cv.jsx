@@ -1,0 +1,21 @@
+import Carrosel from '../components/index/carrosel/Carrosel';
+import Form from '../components/index/form/Form';
+import Head from 'next/head';
+import Info from '../components/index/info/Info';
+
+function EnvoyerVotreCV() {
+	return (
+		<>
+			<Head>
+				<title>Envoyer votre CV</title>
+			</Head>
+			<main>
+				<Carrosel />
+				<Info />
+				<Form />
+			</main>
+		</>
+	);
+}
+
+export default EnvoyerVotreCV;

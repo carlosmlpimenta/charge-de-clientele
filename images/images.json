@@ -1,0 +1,13 @@
+{
+	"logos": {
+		"temp": "https://res.cloudinary.com/cdn-cmlp/image/upload/v1624544861/charge-de-clientele/logos/temp.png"
+	},
+	"index": {
+		"splash": "https://res.cloudinary.com/cdn-cmlp/image/upload/v1625005392/charge-de-clientele/index/splash.png"
+	},
+	"carrosel": [
+		"https://res.cloudinary.com/cdn-cmlp/image/upload/v1624998719/charge-de-clientele/carrosel/1.jpg",
+		"https://res.cloudinary.com/cdn-cmlp/image/upload/v1624998720/charge-de-clientele/carrosel/2.jpg",
+		"https://res.cloudinary.com/cdn-cmlp/image/upload/v1624998720/charge-de-clientele/carrosel/3.jpg"
+	]
+}

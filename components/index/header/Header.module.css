@@ -1,0 +1,49 @@
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	height: 80px;
+	display: flex;
+}
+
+.logo-around {
+	width: 200px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo-around > img {
+	height: 65px;
+	transition: all 0.15s ease-in-out;
+	cursor: pointer;
+}
+
+.logo-around > img:hover {
+	height: 70px;
+}
+
+.links-around {
+	margin-left: 10px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.links-around > span {
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 20px;
+	user-select: none;
+	margin: 0 20px;
+	cursor: pointer;
+	transition: color 0.15s ease-in-out;
+}
+
+.links-around > span:hover {
+	color: #d9eaff;
+}
