@@ -5,7 +5,7 @@ import styles from './Info.module.css';
 
 function Info() {
 	return (
-		<section className={styles.info}>
+		<section id='info-section' className={styles.info}>
 			<div className={styles['info-around']}>
 				<h3>Notre Offre</h3>
 				<p>

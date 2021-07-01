@@ -10,27 +10,30 @@ export default async (req, res) => {
 			req.body.data.preNome &&
 			req.body.data.nome &&
 			req.body.data.email &&
-			req.body.data.telefone
+			req.body.data.telefone &&
+			req.body.data.message
 		)
 	) {
 		res.status(401).send('Unauthorized');
 		return;
 	}
 
-	const { preNome, nome, email, telefone } = req.body.data;
+	const { preNome, nome, email, telefone, message } = req.body.data;
 
 	const r = await transport.sendMail({
 		to: ['carlosmlpimenta@gmail.com'],
 		from: '"Chargè de Clientèle" <noreply.chargedeclientele@gmail.com>',
-		subject: 'CV envoyé',
+		subject: 'Message envoyé',
 		text: `
-    Foi enviado um CV a partir da página "Envoyer votre CV".
+    Foi enviada uma mensagem a partir da página "Envoyer votre CV".
 
-    Informação da candidatura:
+    Informação da mensagem:
     Prenom: ${preNome}
     Nom: ${nome}
     Email: ${email}
-    Telefone: ${telefone}`
+    Telefone: ${telefone}
+		Message: ${message}
+		`
 	});
 
 	if (r.accepted && r.accepted.length) res.status(200).send('OK');

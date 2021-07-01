@@ -1,9 +1,10 @@
 import Button from '../../generics/button/Button';
 import CarroselBackground from './background/CarroselBackground';
+import Link from 'next/link';
 import { goToForm } from '../../navigate';
 import styles from './Carrosel.module.css';
 
-function Carrosel() {
+function Carrosel({ cv }) {
 	return (
 		<section className={styles.carrosel}>
 			<CarroselBackground />
@@ -15,9 +16,15 @@ function Carrosel() {
 					communication et d’argumentation? Êtes vous proactif, dynamique,
 					assidu et avec sens de responsabilité?
 				</p>
-				<Button className={styles.button} onClick={goToForm}>
-					Envoyer votre CV
-				</Button>
+				{cv ? (
+					<Button className={styles.button} onClick={goToForm}>
+						Envoyer votre CV
+					</Button>
+				) : (
+					<Link href='/envoyer-votre-cv#info-section'>
+						<Button className={styles.button}>Envoyer votre CV</Button>
+					</Link>
+				)}
 			</div>
 		</section>
 	);

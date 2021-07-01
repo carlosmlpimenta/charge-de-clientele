@@ -23,7 +23,7 @@ function Header() {
 				</Link>
 				<Link href='/contacts'>
 					<span>
-						<i aria-hidden className='fas fa-phone-alt' /> Contacts
+						<i aria-hidden className='fas fa-envelope' /> Contacts
 					</span>
 				</Link>
 			</div>

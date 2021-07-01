@@ -1,6 +1,7 @@
 import Carrosel from '../components/index/carrosel/Carrosel';
+import Form from '../components/contacts/form/Form';
 import Head from 'next/head';
-import PhoneNumber from '../components/contacts/PhoneNumber';
+import Info from '../components/contacts/info/Info';
 
 function contacts() {
 	return (
@@ -9,7 +10,8 @@ function contacts() {
 				<title>Contacts</title>
 			</Head>
 			<Carrosel />
-			<PhoneNumber number='918768932' />
+			<Info />
+			<Form />
 		</>
 	);
 }

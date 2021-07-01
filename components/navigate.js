@@ -1,4 +1,4 @@
 const goTo = id =>
 	document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
 
-exports.goToForm = () => goTo('form-section');
+export const goToForm = () => goTo('form-section');

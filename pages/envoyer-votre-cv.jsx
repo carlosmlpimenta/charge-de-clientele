@@ -10,7 +10,7 @@ function EnvoyerVotreCV() {
 				<title>Envoyer votre CV</title>
 			</Head>
 			<main>
-				<Carrosel />
+				<Carrosel cv />
 				<Info />
 				<Form />
 			</main>

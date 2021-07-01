@@ -10,6 +10,7 @@ function Form() {
 	const [preNome, setPreNome] = useState('');
 	const [email, setEmail] = useState('');
 	const [telefone, setTelefone] = useState('');
+	const [message, setMessage] = useState('');
 	const [isChecked, setChecked] = useState(false);
 	const [isLoading, setLoading] = useState(false);
 
@@ -18,7 +19,7 @@ function Form() {
 
 		setLoading(true);
 
-		fetch('/api/email/send-cv', {
+		fetch('/api/email/send-message', {
 			method: 'POST',
 			headers: {
 				Accept: 'application/json, text/plain, */*',
@@ -30,7 +31,8 @@ function Form() {
 					preNome,
 					nome,
 					email,
-					telefone
+					telefone,
+					message
 				}
 			})
 		})
@@ -58,7 +60,7 @@ function Form() {
 					src={images.logos.temp}
 					alt='Chargè de Clientèle'
 				/>
-				<h3>Candidature</h3>
+				<h3>Envoyer un Message</h3>
 				<form className={styles.form} {...{ onSubmit }}>
 					<input
 						required
@@ -92,6 +94,13 @@ function Form() {
 						value={telefone}
 						onChange={changer(setTelefone)}
 					/>
+					<textarea
+						required
+						name='message'
+						placeholder='*ÉCRIVEZ VOTRE MESSAGE'
+						value={message}
+						onChange={changer(setMessage)}
+					/>
 					<div className={styles['check-around']}>
 						<i
 							aria-hidden
@@ -111,7 +120,7 @@ function Form() {
 						className={`${styles.button} ${!isChecked ? styles.disabled : ''}`}
 						disabled={!isChecked || isLoading}
 					>
-						Envoyer votre Candidature
+						Envoyer votre Message
 					</button>
 				</form>
 			</div>
