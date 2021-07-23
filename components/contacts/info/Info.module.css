@@ -48,8 +48,10 @@
 	margin-right: 5px;
 }
 
-.info-around > a:hover {
-	color: #61aafd;
+@media (hover) {
+	.info-around > a:hover {
+		color: #61aafd;
+	}
 }
 
 .button {

@@ -65,14 +65,16 @@
 	margin-top: 5px;
 }
 
-.button:hover {
-	background: #3d7fca;
-}
+@media (hover) {
+	.button:hover {
+		background: #3d7fca;
+	}
 
-.disabled,
-.disabled:hover {
-	background: #abb7c5;
-	cursor: default !important;
+	.disabled,
+	.disabled:hover {
+		background: #abb7c5;
+		cursor: default !important;
+	}
 }
 
 .check-around {
@@ -98,12 +100,46 @@
 	color: #0077ff;
 }
 
-.check-around > span > a:hover,
-.check-around > i:hover {
-	color: #61aafd;
-}
-
 .check-around > span {
 	font-size: 11px;
 	color: #444444;
+}
+
+@media (hover) {
+	.check-around > span > a:hover,
+	.check-around > i:hover {
+		color: #61aafd;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.form-around {
+		width: 450px;
+		padding-top: 40px;
+		padding-bottom: 70px;
+	}
+
+	.form-around > h3 {
+		font-size: 28px;
+		margin-top: 8px;
+	}
+
+	.img {
+		height: 80px;
+	}
+
+	.form > input {
+		font-size: 11px;
+		padding: 8px 15px;
+		width: 250px;
+		margin: 5px 0;
+	}
+
+	.check-around > span {
+		font-size: 9px;
+	}
+
+	.button {
+		font-size: 12px;
+	}
 }

@@ -62,3 +62,39 @@
 	align-self: flex-start;
 	margin-top: 15px;
 }
+
+@media only screen and (max-width: 1000px) {
+	.info-around {
+		width: 450px;
+		padding-top: 10px;
+		padding-bottom: 50px;
+	}
+
+	.image-row {
+		flex-direction: column;
+	}
+
+	.offre-around {
+		width: 100%;
+	}
+
+	.offre-around > h3,
+	.info-around > h3 {
+		font-size: 20px;
+		margin-top: 30px;
+		margin-bottom: 5px;
+	}
+
+	.info-around > p,
+	.list > li {
+		font-size: 12px;
+		line-height: 16px;
+	}
+
+	.splash {
+		margin-left: unset;
+		margin-top: -20px;
+		width: 300px;
+		align-self: center;
+	}
+}

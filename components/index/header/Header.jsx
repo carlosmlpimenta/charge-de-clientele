@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { goToForm } from '../../navigate';
 import images from '../../../images/images.json';
 import styles from './Header.module.css';
 
@@ -11,16 +12,9 @@ function Header() {
 				</Link>
 			</div>
 			<div className={styles['links-around']}>
-				<Link href='/'>
-					<span>
-						<i aria-hidden className='fas fa-home' /> Accueil
-					</span>
-				</Link>
-				<Link href='/envoyer-votre-cv'>
-					<span>
-						<i aria-hidden className='fas fa-file-alt' /> Envoyer votre CV
-					</span>
-				</Link>
+				<span onClick={goToForm}>
+					<i aria-hidden className='fas fa-file-alt' /> Envoyer votre CV
+				</span>
 				<Link href='/contacts'>
 					<span>
 						<i aria-hidden className='fas fa-envelope' /> Contacts

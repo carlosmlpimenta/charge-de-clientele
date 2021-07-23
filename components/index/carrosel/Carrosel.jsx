@@ -21,7 +21,7 @@ function Carrosel({ cv }) {
 						Envoyer votre CV
 					</Button>
 				) : (
-					<Link href='/envoyer-votre-cv#info-section'>
+					<Link href='/#info-section'>
 						<Button className={styles.button}>Envoyer votre CV</Button>
 					</Link>
 				)}

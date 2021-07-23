@@ -22,8 +22,10 @@
 	cursor: pointer;
 }
 
-.logo-around > img:hover {
-	height: 70px;
+@media (hover) {
+	.logo-around > img:hover {
+		height: 70px;
+	}
 }
 
 .links-around {
@@ -44,6 +46,27 @@
 	transition: color 0.15s ease-in-out;
 }
 
-.links-around > span:hover {
-	color: #d9eaff;
+@media (hover) {
+	.links-around > span:hover {
+		color: #d9eaff;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.logo-around {
+		width: 120px;
+	}
+
+	.logo-around > img {
+		height: 60px;
+	}
+
+	.links-around {
+		margin-left: 0px;
+	}
+
+	.links-around > span {
+		font-size: 16px;
+		margin: 0 10px;
+	}
 }

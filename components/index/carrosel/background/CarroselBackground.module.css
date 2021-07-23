@@ -24,3 +24,9 @@
 .hide {
 	opacity: 0;
 }
+
+@media only screen and (max-width: 1000px) {
+	.image {
+		height: 500px;
+	}
+}
