@@ -58,3 +58,59 @@
 	align-self: flex-start;
 	margin-top: 15px;
 }
+
+@media only screen and (max-width: 1000px) {
+	.info-around {
+		width: 450px;
+		padding-top: 10px;
+		padding-bottom: 50px;
+	}
+
+	.info-around > h3 {
+		font-size: 20px;
+		margin-top: 30px;
+		margin-bottom: 5px;
+	}
+
+	.info-around > p {
+		font-size: 12px;
+		line-height: 16px;
+	}
+
+	.info-around > a {
+		width: 250px;
+		font-size: 11px;
+	}
+
+	.info-around > a > i {
+		font-size: 14px;
+		margin-top: 2px;
+		margin-right: 5px;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.info-around {
+		width: 320px;
+	}
+
+	.info-around > h3 {
+		font-size: 18px;
+	}
+
+	.info-around > p {
+		font-size: 10px;
+		line-height: 14px;
+	}
+
+	.info-around > a {
+		width: 220px;
+		font-size: 10px;
+	}
+
+	.info-around > a > i {
+		font-size: 14px;
+		margin-top: 1px;
+		margin-right: 3px;
+	}
+}

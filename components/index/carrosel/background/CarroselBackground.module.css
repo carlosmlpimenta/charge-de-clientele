@@ -14,7 +14,6 @@
 	width: 100vw;
 	height: 600px;
 	transition: opacity 1s ease-in-out;
-	will-change: opacity;
 }
 
 .show {
@@ -27,6 +26,12 @@
 
 @media only screen and (max-width: 1000px) {
 	.image {
-		height: 500px;
+		height: 400px;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.image {
+		height: 300px;
 	}
 }

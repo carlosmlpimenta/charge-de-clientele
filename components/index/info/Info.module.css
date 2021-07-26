@@ -98,3 +98,24 @@
 		align-self: center;
 	}
 }
+
+@media only screen and (max-width: 500px) {
+	.info-around {
+		width: 320px;
+	}
+
+	.offre-around > h3,
+	.info-around > h3 {
+		font-size: 18px;
+	}
+
+	.info-around > p,
+	.list > li {
+		font-size: 10px;
+		line-height: 14px;
+	}
+
+	.splash {
+		width: 250px;
+	}
+}

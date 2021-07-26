@@ -55,10 +55,37 @@
 
 @media only screen and (max-width: 1000px) {
 	.carrosel {
-		height: 500px;
+		height: 400px;
 	}
 
 	.main-text {
 		right: unset;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.carrosel {
+		height: 300px;
+	}
+
+	.button {
+		padding: 7px 12px !important;
+		font-size: 12px !important;
+		margin-top: 3px !important;
+	}
+
+	.main-text > p {
+		font-size: 11px;
+		margin-bottom: 5px;
+	}
+
+	.main-text > h1 {
+		font-size: 22px;
+		margin-bottom: 5px;
+	}
+
+	.main-text {
+		width: 300px;
+		bottom: 30px;
 	}
 }
